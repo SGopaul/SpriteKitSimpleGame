@@ -8,6 +8,10 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface MyScene : SKScene
+@interface MyScene : SKScene <SKPhysicsContactDelegate>
+
+@property (nonatomic) SKSpriteNode *player;
+@property (nonatomic) NSTimeInterval lastSpawnTimeInterval, lastUpdateTimeInterval;
+@property (nonatomic) int monsterDestroyed;
 
 @end

@@ -24,6 +24,10 @@
 		D418538C18DDFFF10060ECCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D418536718DDFFF10060ECCF /* UIKit.framework */; };
 		D418539418DDFFF10060ECCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D418539218DDFFF10060ECCF /* InfoPlist.strings */; };
 		D418539618DDFFF10060ECCF /* SpriteKitSimpleGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D418539518DDFFF10060ECCF /* SpriteKitSimpleGameTests.m */; };
+		D41853AB18DE018D0060ECCF /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = D41853A818DE018D0060ECCF /* background-music-aac.caf */; };
+		D41853AC18DE018D0060ECCF /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = D41853A918DE018D0060ECCF /* pew-pew-lei.caf */; };
+		D41853AD18DE018D0060ECCF /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D41853AA18DE018D0060ECCF /* sprites.atlas */; };
+		D41853B218DE185A0060ECCF /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D41853B118DE185A0060ECCF /* GameOverScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,12 @@
 		D418539118DDFFF10060ECCF /* SpriteKitSimpleGameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpriteKitSimpleGameTests-Info.plist"; sourceTree = "<group>"; };
 		D418539318DDFFF10060ECCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D418539518DDFFF10060ECCF /* SpriteKitSimpleGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpriteKitSimpleGameTests.m; sourceTree = "<group>"; };
+		D41853A818DE018D0060ECCF /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		D41853A918DE018D0060ECCF /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		D41853AA18DE018D0060ECCF /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
+		D41853AE18DE165C0060ECCF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D41853B018DE185A0060ECCF /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
+		D41853B118DE185A0060ECCF /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,7 @@
 		D418536218DDFFF10060ECCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D41853AE18DE165C0060ECCF /* AVFoundation.framework */,
 				D418536318DDFFF10060ECCF /* Foundation.framework */,
 				D418536518DDFFF10060ECCF /* CoreGraphics.framework */,
 				D418536718DDFFF10060ECCF /* UIKit.framework */,
@@ -128,6 +139,8 @@
 				D418537B18DDFFF10060ECCF /* ViewController.m */,
 				D418537D18DDFFF10060ECCF /* MyScene.h */,
 				D418537E18DDFFF10060ECCF /* MyScene.m */,
+				D41853B018DE185A0060ECCF /* GameOverScene.h */,
+				D41853B118DE185A0060ECCF /* GameOverScene.m */,
 				D418538018DDFFF10060ECCF /* Spaceship.png */,
 				D418538218DDFFF10060ECCF /* Images.xcassets */,
 				D418536C18DDFFF10060ECCF /* Supporting Files */,
@@ -138,6 +151,8 @@
 		D418536C18DDFFF10060ECCF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D41853A718DE018D0060ECCF /* Sounds */,
+				D41853AA18DE018D0060ECCF /* sprites.atlas */,
 				D418536D18DDFFF10060ECCF /* SpriteKitSimpleGame-Info.plist */,
 				D418536E18DDFFF10060ECCF /* InfoPlist.strings */,
 				D418537118DDFFF10060ECCF /* main.m */,
@@ -162,6 +177,15 @@
 				D418539218DDFFF10060ECCF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D41853A718DE018D0060ECCF /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D41853A818DE018D0060ECCF /* background-music-aac.caf */,
+				D41853A918DE018D0060ECCF /* pew-pew-lei.caf */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,10 +264,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41853AD18DE018D0060ECCF /* sprites.atlas in Resources */,
+				D41853AB18DE018D0060ECCF /* background-music-aac.caf in Resources */,
 				D418537018DDFFF10060ECCF /* InfoPlist.strings in Resources */,
 				D418538318DDFFF10060ECCF /* Images.xcassets in Resources */,
 				D418538118DDFFF10060ECCF /* Spaceship.png in Resources */,
 				D418537918DDFFF10060ECCF /* Main.storyboard in Resources */,
+				D41853AC18DE018D0060ECCF /* pew-pew-lei.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41853B218DE185A0060ECCF /* GameOverScene.m in Sources */,
 				D418537F18DDFFF10060ECCF /* MyScene.m in Sources */,
 				D418537C18DDFFF10060ECCF /* ViewController.m in Sources */,
 				D418537618DDFFF10060ECCF /* AppDelegate.m in Sources */,
@@ -393,6 +421,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpriteKitSimpleGame/SpriteKitSimpleGame-Prefix.pch";
 				INFOPLIST_FILE = "SpriteKitSimpleGame/SpriteKitSimpleGame-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -407,6 +436,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpriteKitSimpleGame/SpriteKitSimpleGame-Prefix.pch";
 				INFOPLIST_FILE = "SpriteKitSimpleGame/SpriteKitSimpleGame-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
